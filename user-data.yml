@@ -1,0 +1,19 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: plex
+    username: ubuntu
+    password: "$6$rounds=4096$uniquehash$hashedpassword"
+  ssh:
+    install-server: true
+    authorized-keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCrZHsFwk/FpqaW25ohPsUhirS8biNGPhrX6EdqVYjvT7uULMP9mWIuAuHccycgkUx44S2GqjTaeOXxXuSEVwGaoGy1IVRZzBk+cjgvRll4F8XifSnRXAdscfgAgSRd048kT399I64mfpDBbHCJJh0qKv/boh8oDM6TMEsIwvParwgkfijUH2inmA9SUrxtg0Jc+MnZboXDrNgh09yy8w7U5f/EHn/aHeIlkwenORVzwBJIBsfQQIpEp7gGlSheDleH29k4uFSMA/MPjUPr+gvCYEZNKfo8XBhczTXgkx+KKQjiGYE2w391rr1eCmr8qMYroZvrBYswLfwY3FEZHl7eOhBUnHk30BqNHHw4NxgHzb1ijHzfZcldAlyEDOqqnicFh+h7KY3Wcik45rdXJvNCMxcerbNGWDG4oJMKbUTmW/+uCHLyW0YyJWK5dfwPYzza4yhRjQUMHpwjVPGekodg1aQkpIXIDJAkRgU91l3wt0JvN4LyCmDFWyOt0Ip8SGBP0wHwcZFOOmvYxWJpED6dEShs+MokJbEzpMJZfdrYWxIThfmeOkWspj6SFJxnORAImF01kV7zlLe2tWwkTOmtxMvzXRig2u3JOSA0hcMvlrhZXWvyJP0JiA/3aWMUg58o2rAVJcJGtM6lOvg6jczmVrDItxlY4JiXSsquCAtBbw== viljoend@outlook.com"
+  storage:
+    layout:
+      name: direct
+  keyboard:
+    layout: us
+  locale: en_US
+  packages:
+    - openssh-server
